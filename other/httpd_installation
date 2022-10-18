@@ -1,1 +1,14 @@
 
+How To Install the Apache Web Server on CentOS?
+Step 1 — Installing Apache
+
+Apache is available within CentOS’s default software repositories, which means you can install it with the yum package manager.
+
+As the non-root sudo user configured in the prerequisites, update the local Apache httpd package index to reflect the latest upstream changes:
+
+sudo yum update httpd
+Once the packages are updated, install the Apache package:
+
+sudo yum install httpd
+After confirming the installation, yum will install Apache and all required dependencies
+
