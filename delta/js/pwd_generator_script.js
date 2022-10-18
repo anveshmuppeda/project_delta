@@ -1,14 +1,14 @@
-const password_ele = document.getElementById("pwd_txt");
+
 const generate = document.getElementById("generate");
 const clipboard = document.getElementById("clipboard");
-var pwd_length = document.getElementById("slider");
-const pwEl = document.getElementById("pw");
+const passwordLength = document.getElementById("slider");
+const passwordElement = document.getElementById("passwordText");
 
 const digits = document.getElementById("Digits");
-const alphabetsElement = document.getElementById("Alphabets");
+const alphabetsElement = document.getElementById("lowerCaseLetters");
 const upperCaseLetters = document.getElementById("uppercaseletters");
 const specialCharactersElement = document.getElementById("SpecialCharacters");
-let strengthOfPassword = document.getElementById('strength')
+let strengthOfPassword = document.getElementById('strength');
 
 
 var alphabets = "abcdefghijklmnopqrstuvwxyz";
@@ -16,12 +16,13 @@ var upperCaseAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "!@$%^&()_+=";
 
-let strongPassword = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})');
-let mediumPassword = new RegExp('^(?=.*[A-z])(?=.*[0-9])');
-let mediumPasswordSmallAlphabets = new RegExp('^(?=.*[A-Z])(?=.*[0-9])');
+let strongPassword = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[=+^()_!@$\$%\^&\*])(?=.{8,})');
+let mediumPassword = new RegExp("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$");
+let mediumPasswordWithSmallAlphabets = new RegExp("^(?=.*[a-z])(?=.*[0-9])[a-z0-9]+$");
+let mediumPasswordWithBoth = new RegExp("^(?=.*[A-Za-z0-9])");
 
 
-function getAlphabets() {
+function getUpperCaseAlphabets() {
     return alphabets[Math.floor(Math.random() * alphabets.length)];
 }
 
@@ -38,14 +39,14 @@ function getSpecialCharacters() {
 }
 
 function generatePassword() {
-    const len = pwd_length.value;
+    const lengthOfPassword = passwordLength.value;
 
     let password = "";
 
     if(alphabetsElement.checked || upperCaseLetters.checked || digits.checked || specialCharactersElement.checked ){
 
     if (alphabetsElement.checked) {
-        password += getAlphabets();
+        password += getUpperCaseAlphabets();
     }
 
     if (upperCaseLetters.checked) {
@@ -60,36 +61,36 @@ function generatePassword() {
         password += getSpecialCharacters();
     }
 
-    for (let i = password.length; i < len; i++) {
-        const x = generateX();
+    for (let i = password.length; i < lengthOfPassword; i++) {
+        const x = generateFinalPassword();
         password += x;
     }
 }
     return password;
 }
 
-function generateX() {
-    const xs = [];
+function generateFinalPassword() {
+    const emptyArray = [];
 
     if (alphabetsElement.checked) {
-        xs.push(getAlphabets());
+        emptyArray.push(getUpperCaseAlphabets());
     }
 
     if (upperCaseLetters.checked) {
-        xs.push(getUpperCaseLetters());
+        emptyArray.push(getUpperCaseLetters());
     }
 
     if (digits.checked) {
-        xs.push(getNumbers());
+        emptyArray.push(getNumbers());
     }
 
     if (specialCharactersElement.checked) {
-        xs.push(getSpecialCharacters());
+        emptyArray.push(getSpecialCharacters());
     }
 
-    if (xs.length === 0) return "";
+    if (emptyArray.length === 0) return "";
 
-    return xs[Math.floor(Math.random() * xs.length)];
+    return emptyArray[Math.floor(Math.random() * emptyArray.length)];
 }
 
 generate.addEventListener('click', () => {
@@ -100,15 +101,15 @@ generate.addEventListener('click', () => {
         if(strongPassword.test(password)) {
             strengthOfPassword.style.backgroundColor = "green";
             strengthOfPassword.textContent = 'Strong';
-            password_ele.innerText = password;
-        } else if(mediumPassword.test(password)||mediumPasswordSmallAlphabets.test(password)){
+            passwordElement.innerText = password;
+        } else if(mediumPassword.test(password)||mediumPasswordWithSmallAlphabets.test(password)|| mediumPasswordWithBoth.test(password)){
             strengthOfPassword.style.backgroundColor = 'blue';
             strengthOfPassword.textContent = 'Medium';
-            password_ele.innerText = password;
+            passwordElement.innerText = password;
         } else{
             strengthOfPassword.style.backgroundColor = 'red';
             strengthOfPassword.textContent = 'Weak';
-            password_ele.innerText = password;
+            passwordElement.innerText = password;
         }
     }else {
         alert("Please Select Atleast One Checkbox");
@@ -117,5 +118,5 @@ generate.addEventListener('click', () => {
 
 
 clipboard.addEventListener('click', () => {
-  navigator.clipboard.writeText(password_ele.innerText);
+  navigator.clipboard.writeText(passwordElement.innerText);
 });
