@@ -1,0 +1,153 @@
+html{
+    min-height: 100%;
+    }
+    
+    body{
+    min-height: 100%;
+    background-image: url("../images/lock.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+    } 
+    
+    .slider{
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    background: black;
+    border-radius: 15px;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    }
+    
+    .slider:hover{
+    opacity: 0.5;
+    }
+    
+    .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #1eaeff;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    
+    .generateActionButton{
+    background-color: lightblue;
+    border: 0;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px  20px;
+    border-radius: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    opacity: 1.5;
+    transition: opacity .2s;
+    display: block;
+    top:50%;
+    right: 50%;
+    left: 90%;
+    transform: translateX(40%);
+    }
+    
+    
+    
+    .generateActionButton:hover{
+    opacity: 0.5;
+    }
+    
+    
+    
+    .wrapper{
+    display: flex;
+    background-color: #F1FAFF;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px ;
+    padding-bottom: 1%;
+    }
+    
+    .slider_main{
+    display: flex;
+    flex-direction: row;
+    }
+    
+    output{
+    margin-top: 20px;
+    margin-left: 10px;
+    }
+    
+    
+
+    .password{
+        display: flex;
+        position: relative;
+        margin-left: 256px;;
+    }
+    
+    
+    
+    .clipboard{
+    cursor: pointer;
+    border: 0;
+    background-color: #F1FAFF;
+    color:black;
+    border-radius: 15px;
+    font-size: 23px;
+    opacity: 1;
+    transition: opacity .2s;
+    display: inline-block;
+    }
+    
+    
+    
+    .clipboard:hover{
+    opacity: 0.5;
+    }
+
+
+
+    .main_wrapper {
+        width: 600px;
+        height: 600px;
+        background-color: #1eaeff;
+        position:absolute;
+        top: 20%;
+        left: 13%;
+        right: 20%;
+        bottom: 10%;
+        margin: -25px 0 0 -25px;
+        opacity: 0.97;
+       display: inline-block;
+       color: black;
+       text-align: center;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       font-size: 25px;
+      }
+
+      .container{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: black;
+        display: flex;
+        padding-left: 15px;
+        text-indent: 15px;
+      }
