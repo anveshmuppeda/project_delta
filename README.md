@@ -1,2 +1,2 @@
 # Project_Delta
-This is about the project Delta, which includes all security features.
+This is about the <b>project Delta</b>, which includes multiple security features.
