@@ -1,0 +1,21 @@
+
+
+username: projectdelta
+Password : projectdelta@123
+
+#Opening port 8000 for splunk
+firewall-cmd --zone=public --add-port=8000/tcp --permanent
+firewall-cmd --reload
+
+
+earch not executed: The minimum free disk space (5000MB) reached for /opt/splunk/var/run/splunk/dispatch
+
+
+
+wget -O splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz "https://download.splunk.com/products/universalforwarder/releases/9.0.2/linux/splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz"
+tar -xvzf splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz -C /opt/
+
+sudo ./splunk start --accept-license
+
+8088
+

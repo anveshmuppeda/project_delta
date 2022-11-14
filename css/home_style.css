@@ -5,7 +5,7 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(./../jpg/imagebag.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(./../images/imagebag.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -21,13 +21,13 @@
     height: 70px;
 }
 .logo{
-    color: #B2B2B2;
+    color: white;
     font-size: 25px;
     font-family: Arial Black;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
-    margin-top: 5px
+    margin-top: 17px
 }
 
 .menu{
@@ -117,6 +117,7 @@ ul li a: hover{
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
+    color: honeydew;
 }
 
 .content h1{
@@ -139,8 +140,6 @@ ul li a: hover{
     padding: 25px;
 }
 
-
-
 .form h2{
     width: 220px;
     font-family: sans-serif;
@@ -152,8 +151,6 @@ ul li a: hover{
     margin: 2px;
     padding: 8px;
 }
-
-
 
 .form input{
     width: 240px;
@@ -170,13 +167,9 @@ ul li a: hover{
     font-family: sans-serif;
 }
 
-
-
 .form input:focus{
     outline: none;
 }
-
-
 
 ::placeholder{
     color: #fff;
@@ -205,3 +198,15 @@ ul li a: hover{
     text-decoration: none;
     color: white;
   }
+
+.content h2{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: 'Times New Roman';
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    font-size: 40px;
+    color: azure;
+  }
+
+

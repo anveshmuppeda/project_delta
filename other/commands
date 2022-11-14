@@ -1,1 +1,39 @@
 
+
+How to fix – firewall-cmd: command not found centos 7?
+https://bobcares.com/blog/firewall-cmd-command-not-found/
+
+https://www.tecmint.com/fix-firewall-cmd-command-not-found-error/
+
+How To Install the Apache Web Server on CentOS 7
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-7
+
+
+
+Install Apache and PHP on CentOS 7
+https://docs.rackspace.com/support/how-to/centos-7-apache-and-php-install/
+
+
+Important
+How To Install the Apache Web Server on CentOS 7
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-7
+
+Password generator:
+https://dev.to/divyamcm/password-generator-using-html-css-and-javascript-3a0c
+
+
+
+Commands:
+/usr/share/httpd/noindex
+
+
+
+
+Root directory: /var/www/html/
+
+Website configuration: /etc/httpd/
+
+Website configuration file: /etc/httpd/conf/httpd.conf
+
+Website logs including error and access: /etc/httpd/logs
+
