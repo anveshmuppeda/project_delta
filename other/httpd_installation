@@ -1,14 +1,31 @@
-
+===============================================
 How To Install the Apache Web Server on CentOS?
+===============================================
 Step 1 — Installing Apache
 
-Apache is available within CentOS’s default software repositories, which means you can install it with the yum package manager.
+#Apache is available within CentOS’s default software repositories, which means you can install it with the yum package manager.
+#As the non-root sudo user configured in the prerequisites, update the local Apache httpd package index to reflect the latest upstream changes:
 
-As the non-root sudo user configured in the prerequisites, update the local Apache httpd package index to reflect the latest upstream changes:
+$sudo yum update httpd
 
-sudo yum update httpd
-Once the packages are updated, install the Apache package:
+#Once the packages are updated, install the Apache package:
+$sudo yum install httpd
 
-sudo yum install httpd
-After confirming the installation, yum will install Apache and all required dependencies
+#After confirming the installation, yum will install Apache and all required dependencies
+#If you completed the Additional Recommended Steps for New CentOS 7 Servers guide mentioned in the prerequisites section, you will have installed firewalld on your server and you’ll need to open up port 80 to allow Apache to serve requests over HTTP. If you haven’t already done so, you can do this by enabling firewalld’s http service with the following command:
+$sudo firewall-cmd --permanent --add-service=http
+
+#If you plan to configure Apache to serve content over HTTPS, you will also want to open up port 443 by enabling the https service:
+$sudo firewall-cmd --permanent --add-service=https
+
+#Next, reload the firewall to put these new rules into effect:
+$sudo firewall-cmd --reload
+
+##Step 2 — Checking your Web Server
+
+#Apache does not automatically start on CentOS once the installation completes. You will need to start the Apache process manually:
+$sudo systemctl start httpd
+
+#Verify that the service is running with the following command:
+$sudo systemctl status httpd
 

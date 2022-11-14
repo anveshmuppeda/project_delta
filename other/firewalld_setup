@@ -1,0 +1,22 @@
+=================
+FIREWALLD SETUP
+=================
+
+#How we fix the error firewall-cmd: command not found?
+#Install the firewalld by running the command:
+$yum install firewalld
+
+#After that, we start the firewall using the command:
+$systemctl start firewalld
+
+#To enable the service to auto-start at boot time we use the command:
+$systemctl enable firewalld
+
+#Then, we checked for its status using the command:
+$systemctl status firewalld
+
+#Once we saw the status is enabled, now we can run the firewall-cmd to open a port 80
+$firewall-cmd --zone=public --add-port=80/tcp --permanent
+
+#Lastly, we reloaded it using the command
+firewall-cmd --reload
