@@ -1,7 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-<h1> Work in Progress...... </h1>
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encoding and Decoding</title>
+    <link rel="stylesheet" href="./../css/Encoding.css" />
+  </head>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+    integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o="
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <div
+      class="wrapper"
+      style="
+        background-image: url('https://thumbs.dreamstime.com/z/matrix-5366077.jpg');
+      "
+    >
+      <div class="container">
+        <h2>Type your input to Encrypt</h2>
+        <div class="input">
+          <textarea id="input"></textarea>
+        </div>
+        <button id="btnEncrypt">Encrypt</button>
+        <h2>Your Encrypted text is:</h2>
+        <div class="output">
+          <textarea id="output"></textarea>
+        </div>
+      </div>
+      <div class="container2">
+        <h2>Type your input to Decrypt</h2>
+        <h4>Only paste/write an encrypted text from this app</h4>
+
+        <div class="input2">
+          <textarea id="input2"></textarea>
+        </div>
+        <button id="btnDecrypt">Decrypt</button>
+        <h2>Your Decrypted text is:</h2>
+
+        <div class="output2">
+          <textarea id="output2"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./../js/encoding.js"></script>
 </html>

@@ -46,3 +46,9 @@ $firewall-cmd --zone=public --permanent --add-port=8088/udp
 
 #delete the index data from the splunk UI
 $index=main sourcetype=syslog | delete
+
+#after restart of the server
+1. Restart the spunk on splunkforwarder
+2. Update the new IP
+    $/opt/splunkforwarder/bin/splunk add forward-server 18.117.242.146:9997
+3. Restart the splunk on splunkforwarder

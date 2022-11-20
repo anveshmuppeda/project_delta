@@ -1,0 +1,86 @@
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+#btnEncrypt {
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: rgb(80, 64, 57);
+    color: white;
+    margin-left: 300px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+}
+
+#btnEncrypt:hover {
+    cursor: pointer;
+}
+
+#btnDecrypt {
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: rgb(39, 82, 82);
+    color: white;
+    margin-left: 300px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(226, 226, 226);
+}
+
+#btnDecrypt:hover {
+    cursor: pointer;
+}
+
+
+.container {
+    color: white;
+    padding: 50px;
+    background-color: rgb(39, 82, 82);
+    border-radius: 20px;
+    box-shadow: 12px 12px 12px rgb(102, 160, 94);
+}
+
+.container2 {
+    color: white;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: rgb(80, 64, 57);
+    box-shadow: 12px 12px 12px rgb(143, 92, 92);
+}
+
+h4 {
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900
+}
+
+.input textarea {
+    height: 100px;
+    width: 400px;
+}
+
+.output textarea {
+    height: 100px;
+    width: 400px;
+}
+
+.input2 textarea {
+    height: 100px;
+    width: 400px;
+}
+
+.output2 textarea {
+    height: 100px;
+    width: 400px;
+}
