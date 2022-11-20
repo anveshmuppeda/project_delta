@@ -36,7 +36,7 @@ $/opt/splunkforwarder/bin/splunk add forward-server 18.117.242.146:9997
 $/opt/splunkforwarder/bin/splunk add monitor /etc/httpd/logs/access_log -index main
 
 #to check the above configuration
-/opt/splunkforwarder/etc/apps/search/local/input.conf
+/opt/splunkforwarder/etc/apps/search/local/inputs.conf
 
 #enable the forward ports
 $firewall-cmd --zone=public --permanent --add-port=9997/tcp
