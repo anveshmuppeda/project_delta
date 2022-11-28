@@ -1,13 +1,16 @@
 #!/bin/bash
 # Run a command in the background.
+echo "$a"
 _evalBg() {
     eval "$@" &>/dev/null & disown;
 }
 
-for i in {1..10}
+START=1
+END=$1
+echo "Countdown"
+ 
+for (( c=$START; c<=$END; c++ ))
 do
-   #sending http request to the server in the background
-   curl ec2-18-118-14-204.us-east-2.compute.amazonaws.com &>/dev/null &
-   #Desplaying the iterations
-   echo "$i hit done!!"
+	echo "$c hit done"
+    curl http://ec2-13-58-159-91.us-east-2.compute.amazonaws.com/html/passwordGenerator.html &>/dev/null &
 done
