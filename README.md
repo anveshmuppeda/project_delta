@@ -24,21 +24,23 @@ Website [goodguyandco](https://www.goodguyandco.com) has got some security featu
   - SHELL SCRIPT
   - SPLUNK
   
-**INTRODUCTION**
+**FLOWCHART**
+
 ![Project-delta-flowchart](https://user-images.githubusercontent.com/105936371/204969856-b7b60979-885b-4c80-a336-8a6c4cc93713.png)
 
 
 **HOME PAGE**
+
 ![homePage](https://user-images.githubusercontent.com/105936371/204969642-d065b46c-0449-4141-a2b5-c2b15da442a1.png)
 
 
 
 **TEAM MEMBERS OF THE PROJECT**
-  -Anvesh Muppeda
-  -Saran Kumar
-  -Rishabh Kumar
-  -Hemanth Pavan Kashyap
-  -Kanikireddy Shireesha
-  -Meghana Reddy
-  -Amulya Jangalapalli
-  -Raskhitha Krishnan
+  - Anvesh Muppeda
+  - Saran Kumar
+  - Rishabh Kumar
+  - Hemanth Pavan Kashyap
+  - Kanikireddy Shireesha
+  - Meghana Reddy
+  - Amulya Jangalapalli
+  - Rakshitha Krishnan
