@@ -5,24 +5,33 @@ Website [goodguyandco](https://www.goodguyandco.com) has got some security featu
 
 
 **HIGHLIGHTS OF THE PROJECT**
-  -Creation of own domain
-  -Signup
-  -Password Generator
-  -Password Strength Checker
-  -Encoding and Decoding
-  -Network Monitoring by Splunk
+  - Creation of own domain
+  - Signup
+  - Password Generator
+  - Password Strength Checker
+  - Encoding and Decoding
+  - Network Monitoring by Splunk
 
 **REFERENCE ALGORITHM**
-  -AES Algorithm.
+  - AES Algorithm.
 
 **TOOLS & TECHNOLOGIES USED**
-  -AWS - VPC, EC2, NACL, SUBNETS, SECURITY GROUPS, RDS
-  -SPRING BOOT
-  -HTML
-  -CSS
-  -JAVASCRIPT
-  -SHELL SCRIPT
-  -SPLUNK
+  - AWS - VPC, EC2, NACL, SUBNETS, SECURITY GROUPS, RDS
+  - SPRING BOOT
+  - HTML
+  - CSS
+  - JAVASCRIPT
+  - SHELL SCRIPT
+  - SPLUNK
+  
+**INTRODUCTION**
+![Project-delta-flowchart](https://user-images.githubusercontent.com/105936371/204969856-b7b60979-885b-4c80-a336-8a6c4cc93713.png)
+
+
+**HOME PAGE**
+![homePage](https://user-images.githubusercontent.com/105936371/204969642-d065b46c-0449-4141-a2b5-c2b15da442a1.png)
+
+
 
 **TEAM MEMBERS OF THE PROJECT**
   -Anvesh Muppeda
