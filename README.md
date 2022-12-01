@@ -5,7 +5,6 @@ Website [goodguyandco](https://www.goodguyandco.com) has got some security featu
 
 
 **HIGHLIGHTS OF THE PROJECT**
-  - Creation of own domain
   - Signup
   - Password Generator
   - Password Strength Checker
