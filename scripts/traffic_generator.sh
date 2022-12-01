@@ -12,5 +12,5 @@ echo "Countdown"
 for (( c=$START; c<=$END; c++ ))
 do
 	echo "$c hit done"
-    curl http://ec2-13-58-159-91.us-east-2.compute.amazonaws.com/html/passwordGenerator.html &>/dev/null &
+    curl http://ec2-13-58-159-91.us-east-2.compute.amazonaws.com/html/passwordStrengthChecker.html &>/dev/null &
 done

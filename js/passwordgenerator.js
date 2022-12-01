@@ -14,7 +14,6 @@ const initialLetterCapital = document.getElementById("initialCharacterCapital");
 const initialLetterLowerCase = document.getElementById("initialCharacterLower");
 const initialLetterNumber = document.getElementById("initialCharacterNumber");
 
-var lowerCaseAlphabets = "abcdefghijklmnopqrstuvwxyz";
 var upperCaseAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "!@$%^&()_+=";
@@ -24,12 +23,12 @@ let mediumPassword = new RegExp("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$");
 let mediumPasswordWithSmallAlphabets = new RegExp("^(?=.*[a-z])(?=.*[0-9])[a-z0-9]+$");
 let mediumPasswordWithBoth = new RegExp("^(?=.*[A-Za-z0-9])");
 
+var lowerCaseAlphabets = "abcdefghijklmnopqrstuvwxyz";
 let randomCounter=1;
 let previousRandomValue=1;
 const customRandom =(maximum)=>{
-    time = new Date().getTime();
-    //Added PreviousRandom + 1 as if the random value is 0 then it might throw exception inorder to escape incrementing 
-    randomValue = parseInt(((time/randomCounter)/previousRandomValue+1)%maximum);
+    let time = new Date().getSeconds(); 
+    let randomValue = parseInt(((time/randomCounter)/previousRandomValue)%maximum);
     randomCounter++;
     previousRandom= randomValue;
     return randomValue;
@@ -60,8 +59,6 @@ function disableCheckBox(isCheckBox){
         initialLetterLowerCase.setAttribute('enabled','');
         initialLetterCapital.setAttribute('disabled','');
         initialLetterNumber.setAttribute('disabled','');
-        //document.getElementById("initialLetterCapital").disabled = true;
-        //document.getElementById("initialLetterNumber").disabled = true;
     }
     if (initialLetterCapital.checked) {
         generatedPassword+=getUpperCaseLetters();
@@ -80,12 +77,27 @@ function disableCheckBox(isCheckBox){
 }
 
 function generatePassword() {
+
     const lengthOfPassword = passwordLength.value;
     console.log("lengthOfPassword ="+lengthOfPassword);
+    if (alphabetsElement.checked) {
+        generatedPassword+=getLowerCaseAlphabets();
+    }
+    if (upperCaseLetters.checked) {
+        generatedPassword+=getUpperCaseLetters();
+    }
+    if (digits.checked) {
+        generatedPassword+=getNumbers();
+    }
+    if (specialCharactersElement.checked) {
+   generatedPassword+=getSpecialCharacters();
+    }
     for (let i = generatedPassword.length; i < lengthOfPassword; i++) {
         generatedPassword += generateFinalPassword();
     }
+
     return generatedPassword;
+
 }
 
 function generateFinalPassword() {
@@ -115,17 +127,12 @@ function generateFinalPassword() {
 
 generate.addEventListener('click', () => {
     let password = generatePassword();
-    console.log(password);
     if(password!=""){
-        console.log(strongPassword.test(password));
         if(strongPassword.test(password)) {
-            strengthOfPassword.style.backgroundColor = "green";
             passwordElement.innerText = password;
         } else if(mediumPassword.test(password)||mediumPasswordWithSmallAlphabets.test(password)|| mediumPasswordWithBoth.test(password)){
-            strengthOfPassword.style.backgroundColor = 'blue';
             passwordElement.innerText = password;
         } else{
-            strengthOfPassword.style.backgroundColor = 'red';
             passwordElement.innerText = password;
         }
     }else {
