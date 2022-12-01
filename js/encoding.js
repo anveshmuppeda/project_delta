@@ -10,7 +10,7 @@ const outputText = document.getElementById("output");
 
 btnEncrypt.addEventListener("click", (e) => {
 
-  console.log("btn encrypt");
+  // console.log("btn encrypt");
 
   const payload = inputText.value;
 
