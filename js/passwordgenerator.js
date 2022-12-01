@@ -27,7 +27,7 @@ var lowerCaseAlphabets = "abcdefghijklmnopqrstuvwxyz";
 let randomCounter=1;
 let previousRandomValue=1;
 const customRandom =(maximum)=>{
-    let time = new Date().getSeconds(); 
+    let time = new Date().getTime(); 
     let randomValue = parseInt(((time/randomCounter)/previousRandomValue)%maximum);
     randomCounter++;
     previousRandom= randomValue;
