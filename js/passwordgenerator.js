@@ -1,4 +1,3 @@
-
 const generate = document.getElementById("generate");
 const clipboard = document.getElementById("clipboard");
 const passwordLength = document.getElementById("slider");
@@ -23,6 +22,7 @@ let mediumPassword = new RegExp("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$");
 let mediumPasswordWithSmallAlphabets = new RegExp("^(?=.*[a-z])(?=.*[0-9])[a-z0-9]+$");
 let mediumPasswordWithBoth = new RegExp("^(?=.*[A-Za-z0-9])");
 
+// To Generate Random Value using Time function
 var lowerCaseAlphabets = "abcdefghijklmnopqrstuvwxyz";
 let randomCounter=1;
 let previousRandomValue=1;
@@ -55,21 +55,18 @@ let generatedPassword = "";
 function disableCheckBox(isCheckBox){
     if (initialLetterLowerCase.checked) {
         generatedPassword+=getLowerCaseAlphabets();
-        console.log("alphabetsElement ="+generatedPassword);
         initialLetterLowerCase.setAttribute('enabled','');
         initialLetterCapital.setAttribute('disabled','');
         initialLetterNumber.setAttribute('disabled','');
     }
     if (initialLetterCapital.checked) {
         generatedPassword+=getUpperCaseLetters();
-        console.log("upperCaseLetters ="+generatedPassword);
         initialLetterCapital.setAttribute('enabled','');
         initialLetterNumber.setAttribute('disabled','');
         initialLetterLowerCase.setAttribute('disabled','');
     }
     if (initialLetterNumber.checked) {
         generatedPassword +=getNumbers();
-        console.log("digits ="+generatedPassword);
         initialLetterNumber.setAttribute('enabled','');
         initialLetterCapital.setAttribute('disabled','');
         initialLetterLowerCase.setAttribute('disabled','');
@@ -79,7 +76,6 @@ function disableCheckBox(isCheckBox){
 function generatePassword() {
 
     const lengthOfPassword = passwordLength.value;
-    console.log("lengthOfPassword ="+lengthOfPassword);
     if (alphabetsElement.checked) {
         generatedPassword+=getLowerCaseAlphabets();
     }
@@ -104,7 +100,6 @@ function generateFinalPassword() {
     const passwordArray = [];
 
     if (alphabetsElement.checked) {
-        console.log("passwordArray = "+passwordArray.toString());
         passwordArray.push(getLowerCaseAlphabets());
     }
 
