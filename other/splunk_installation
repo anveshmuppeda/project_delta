@@ -45,6 +45,13 @@ $firewall-cmd --zone=public --permanent --add-port=9997/udp
 $firewall-cmd --zone=public --permanent --add-port=8088/tcp
 $firewall-cmd --zone=public --permanent --add-port=8088/udp
 
+#add the IP on splunk 
+Follow the below 
+Settings -> Data -> Forwarding and Receiving -> Receive data
+Click on "+ Add new" Button
+Then add the 9997 port
+Then restart the splunk and splunkglobalforwarder
+
 #delete the index data from the splunk UI
 $index=main sourcetype=syslog | delete
 
@@ -53,3 +60,9 @@ $index=main sourcetype=syslog | delete
 2. Update the new IP
     $/opt/splunkforwarder/bin/splunk add forward-server 18.117.242.146:9997
 3. Restart the splunk on splunkforwarder
+
+
+#Reference
+https://www.youtube.com/watch?v=c1t1QFTIGBg&t=389s
+
+
