@@ -20,7 +20,7 @@ firewall-cmd --reload
 ```
 $wget -O splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz "https://download.splunk.com/products/universalforwarder/releases/9.0.2/linux/splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz"
 $tar -xvzf splunkforwarder-9.0.2-17e00c557dc1-Linux-x86_64.tgz -C /opt/
-$sudo /opt/splunkforwarder/splunk start --accept-license
+$sudo /opt/splunkforwarder/bin/splunk start --accept-license
 ```
 ##### NOTE: 8089 already in use, so better use 8088
  
