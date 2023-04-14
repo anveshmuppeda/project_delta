@@ -59,7 +59,7 @@ $firewall-cmd --zone=public --permanent --add-port=8088/tcp
 $firewall-cmd --zone=public --permanent --add-port=8088/udp  
 ```
 
-Add the IP on splunk   
+### Add the IP on splunk   
 Follow the below  
 #### Settings -> Data -> Forwarding and Receiving -> Receive data  
 Click on "+ Add new" Button  
